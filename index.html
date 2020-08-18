@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mohsina Sheikh</title>
+	<link rel="icon" href="images/birthday21.png" >
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300,900,700);
+		* {
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+		body {
+			background-color: #000;
+			background-image: url('bg8_1.png');
+			background-repeat: repeat-y;
+			background-size: 100%;
+			background-position: center;
+			padding: 0 35px;
+		}
+		@media screen and (min-width: 900px){
+			.container {
+				display: none;
+			}
+			
+			body {
+				background-color: unset;
+				background-image: unset;
+			}
+			body::before {
+				content: "Mobile use only";
+				font-size: 50px;
+				text-align: center;
+				display: block;
+				height: 100vh;
+				width: 100%;
+				padding-top: calc(50vh - 25px);
+				font-family: Arial;
+			}
+			.welcome {
+				display: none !important;
+			}
+		}
+		.container {
+			
+			
+		}
+		aside {
+			height: 100vh;
+			width: 25px;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			padding: 0 5px;
+		}
+		aside.left {
+			animation: topToDown 6s infinite;
+			animation-direction: alternate;
+			left: 0;
+			
+		}
+		aside.right {
+			animation: bottomToDown 6s infinite;
+			animation-direction: alternate;
+			right: 0;
+			
+		}
+		aside img{
+			max-width: 100%;
+		}
+		aside ul li {
+			margin: 50px 0;
+		}
+		@keyframes topToDown {
+		  	0%   {padding-top: 0px;}
+		  	100% {padding-top: 100%;}
+		}
+		@keyframes bottomToDown {
+		  	0%   {padding-top: 100%;}
+		  	100% {padding-top: 0;}
+		}
+		.clearfix {
+			clear: both;
+		}
+		.welcome {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100%;
+			z-index: 999999;
+			text-align: center;
+		}
+		.welcome::before {
+			content: '';
+			position: fixed;
+			height: 100vh;
+			width: 50%;
+			left: 0;
+			top: 0;
+			background-color: #000;
+			z-index: -1;
+			transition: 3s;
+		}
+		.welcome::after {
+			content: '';
+			position: fixed;
+			height: 100vh;
+			width: 50%;
+			right: 0;
+			top: 0;
+			background-color: #000;
+			z-index: -1;
+			transition: 3s;
+		}
+		.welcome.open::before {
+			left: -100%;
+		}
+		.welcome.open::after {
+			right: -100%;
+		}
+		.welcome div {
+		}
+
+		.timer {
+			width: 100%;
+			display: flex;
+			font-family: 'Titillium Web';
+			font-weight: 100;
+			margin-top: 40vh;
+		}
+		.timer div{
+			flex:1;
+		}
+		#days {
+			font-size: 50px;
+		  	color: #db4844;
+		}
+		#hours {
+		  	font-size: 50px;
+		  	color: #f07c22;
+		}
+		#minutes {
+		  	font-size: 50px;
+		  	color: #f6da74;
+		}
+		#seconds {
+		  	font-size: 30px;
+		  	color: #abcd58;
+		  	padding-top: 25px;
+		}
+		.welcome span {
+		  	display: block;
+		  	font-size: 20px;
+		  	color: white;
+		}
+		.welcome #welcomeImg {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: none;
+			width: 100%;
+		}
+
+		main {
+			width: 100%;
+			color: #fff;
+			font-family: Arial;
+			text-align: center;
+		}
+		main p {
+			color: yellow;
+			font-family: 'Titillium Web';
+			font-weight: 600;
+			letter-spacing: 0.1em;
+		}
+		main p {
+			color: yellow;
+			font-family: 'Titillium Web';
+			font-weight: 600;
+			letter-spacing: 0.1em;
+		}
+		main .hbd {
+			font-family: 'Titillium Web';
+			font-weight: 600;
+			letter-spacing: 1.5px;
+			line-height: 35px;
+		}
+		main .party-img {
+			width: 100%;
+			margin: 25px auto;
+		}
+		main .party-img2 {
+			width: 115%;
+			margin-left: -7.5% !important;
+			margin: 15px auto 0;
+		}
+		main pre {
+			text-align: left;
+			background-color: #fff;
+			color: #000;
+			font-size: 10px;
+			white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+		}
+		.code-heading {
+			text-align: left;
+		}
+		.from {
+			text-align: right;
+			color: #fff;
+			margin-top: -25px;
+			font-size: 11px;
+		}
+	</style>
+</head>
+<body onclick="playAudio()">
+	<div class="container">
+		<aside class="left">
+			<ul>
+				<li><img src="images/emoji1.png"></li>
+				<li><img src="images/emoji2.png"></li>
+				<li><img src="images/emoji3.png"></li>
+				<li><img src="images/emoji4.png"></li>
+				<li><img src="images/emoji5.png"></li>
+				<li><img src="images/emoji6.png"></li>
+			</ul>
+		</aside>
+		<aside class="right">
+			<ul>
+				<li><img src="images/emoji1.png"></li>
+				<li><img src="images/emoji2.png"></li>
+				<li><img src="images/emoji3.png"></li>
+				<li><img src="images/emoji4.png"></li>
+				<li><img src="images/emoji5.png"></li>
+				<li><img src="images/emoji6.png"></li>
+			</ul>
+		</aside>
+		<div class="clearfix"></div>
+		<main>
+			<div class="audio-section">
+				<audio id="birthdaysong" autoplay>
+				  <source src="mohsina.mp3" type="audio/mpeg">
+				  Your browser does not support the audio element.
+				</audio>
+			</div>
+			<br>
+			<p>May your smile be bright just like the sun shines everyday.</p><br>
+			<h1 class="hbd">Happy Birthday<br>to you<br>Mohsina</h1>
+			
+			<img class="party-img" src="images/party.png">
+			<h3 class="code-heading">Java :</h3>
+			<pre>
+import java.Mohsina.*;
+
+public class HappyBirthday extend Mohsina 
+{
+  public static void main(String args[])
+  {
+    int age;
+    Mohsina mohsina = new Mohsina();
+    age = mohsina.getAge();
+    if(today()==mohsina.getBirthDate())
+    {
+      System.out.println("Happy Birthday!");
+      System.out.println("Your age: "+age);
+    }
+  }
+}
+</pre>
+<h3 class="code-heading">Html :</h3>
+<pre>
+&lt;html>
+  &lt;body>
+    &lt;div id="birthdayCard">
+      &lt;name="Mohsina Sheikh">
+      &lt;message="Happy Birthdat!">
+    &lt;/div>
+  &lt;/body>
+&lt;/html>
+</pre>
+			<img id="" style="width: 50%;" src="images/birthday21.png">
+
+			<p style="color: #fff;">
+				Birthdays come around every year, but friends like you only come once in a lifetime. I feel so lucky to have you as my bestfriend. Hope your birthday is as special as you are. May all of your dreams come true. Thanks for being such a great friend. For many people, the word friend is just a sequence of letters. For me, it is the source of happiness and strength because of you.
+			</p>
+			<img class="party-img2" src="images/happy-birthday-theme.jpg">
+			<p class="from">From : Afnan Danish</p>
+		</main>
+		
+	</div>
+	<div id="welcome" class="welcome">
+		<!--<p align="center" id="demo"></p>-->
+		<div class="timer">
+			<div id="days"></div>
+			<div id="hours"></div>
+			<div id="minutes"></div>
+			<div id="seconds"></div>
+		</div>
+		<img id="welcomeImg" src="images/f3.gif">
+	</div>
+	
+</body>
+</html>
+
+<script>
+var countDownDate = new Date("AUG 19, 2020 1:28:00").getTime();
+var x = setInterval(function() {
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	document.getElementById("days").innerHTML = days + "<span>Days</span>";
+  	document.getElementById("hours").innerHTML = hours + "<span>Hours</span>";
+  	document.getElementById("minutes").innerHTML = minutes + "<span>Minutes</span>";
+  	document.getElementById("seconds").innerHTML = seconds + "<span>Seconds</span>";
+	if (distance < 0) {
+	    clearInterval(x);
+	    document.getElementById("days").style.display = "none";
+	    document.getElementById("hours").style.display = "none";
+	    document.getElementById("minutes").style.display = "none";
+	    document.getElementById("seconds").style.display = "none";
+	    document.getElementById("welcomeImg").style.display = "block";
+	    
+	    
+	    setTimeout(function() {
+	    	document.getElementById("welcomeImg").style.display = "none";
+	    	document.getElementById("welcome").classList.add("open");
+	    	
+	    }, 7000);
+	    setTimeout(function() {
+	    	document.getElementById("welcome").style.display = "none";
+	    }, 8000);
+	}
+}, 1000);
+
+
+var y =  document.getElementById("birthdaysong")
+var played = 0;
+function playAudio() {
+	var x = document.getElementById("welcome");
+	if(played != 1) {
+	  	if (window.getComputedStyle(x).display === "none") {
+	  		y.play();
+	    	played = 1;
+			
+	  	}
+  	}
+
+
+  	
+}
+
+</script>
+
+<script type="text/javascript">
+	function getParams ()
+	{
+	    var result = {};
+	    var tmp = [];
+		location.search
+	        .substr (1)
+	        .split ("&")
+	        .forEach (function (item) 
+	        {
+	            tmp = item.split ("=");
+	            result [tmp[0]] = decodeURIComponent (tmp[1]);
+	        });
+		return result;
+	}
+
+	location.getParams = getParams;
+	//console.log (location.getParams());
+	//console.log (val['pass']);
+	
+	var val = location.getParams();
+	var pass = String.fromCharCode(109, 111, 104, 115, 105, 110, 97)
+	if(val['pass']!=pass) {
+		var nobody = document.getElementsByTagName("BODY")[0]
+		nobody.innerHTML = '<h1 style="text-align: center">Not Available</h1>';
+		nobody.style.backgroundImage = "unset";
+		nobody.style.background = "unset";
+	}
+</script>
