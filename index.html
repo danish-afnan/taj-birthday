@@ -257,7 +257,6 @@
 			<h1 class="hbd">Happy Birthday<br>to you<br>Mohsina</h1>
 			
 			<img class="party-img" src="images/party.png">
-			<h1 id="jsonCounter" style="line-height:0.7;font-size:70px;z-index:-1;font-weight:700;opacity:0.3;margin-bottom:-15px;margin-top:-20px;"></h1>
 			<h3 class="code-heading">Java :</h3>
 			<pre>
 import java.Mohsina.*;
@@ -394,24 +393,4 @@ function playAudio() {
 		nobody.style.backgroundImage = "unset";
 		nobody.style.background = "unset";
 	}
-</script>
-<script type="text/javascript">
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
-
-//usage:
-readTextFile("./count.json", function(text){
-    var data = JSON.parse(text);
-    console.log(data);
-	document.getElementById("jsonCounter").innerHTML = data
-});
 </script>
