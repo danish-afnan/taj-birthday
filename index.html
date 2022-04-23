@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mohsina Sheikh</title>
-	<link rel="icon" href="images/birthday21.png" >
+	<link rel="icon" href="images/taj.png" >
 	<style type="text/css">
 		@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300,900,700);
+		@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
 		* {
 			padding: 0;
 			margin: 0;
@@ -153,7 +154,7 @@
 		}
 		.welcome span {
 		  	display: block;
-		  	font-size: 20px;
+		  	font-size: 18px;
 		  	color: white;
 		}
 		.welcome #welcomeImg {
@@ -222,7 +223,7 @@
 		}
 	</style>
 </head>
-<body onclick="playAudio()">
+<body onClick="playAudio()">
 	<div class="container">
 		<aside class="left">
 			<ul>
@@ -248,50 +249,21 @@
 		<main>
 			<div class="audio-section">
 				<audio id="birthdaysong" autoplay>
-				  <source src="mohsina.mp3" type="audio/mpeg">
+				  <source src="taj-birthday.mp3" type="audio/mpeg">
 				  Your browser does not support the audio element.
 				</audio>
 			</div>
 			<br>
 			<p>May your smile be bright just like the sun shines everyday.</p><br>
-			<h1 class="hbd">Happy Birthday<br>to you<br>Mohsina</h1>
+			<h1 class="hbd">Happy Birthday<br>to you<br>TAJ</h1>
 			
-			<img class="party-img" src="images/party.png">
-			<h3 class="code-heading">Java :</h3>
-			<pre>
-import java.Mohsina.*;
-
-public class HappyBirthday extend Mohsina 
-{
-  public static void main(String args[])
-  {
-    int age;
-    Mohsina mohsina = new Mohsina();
-    age = mohsina.getAge();
-    if(today()==mohsina.getBirthDate())
-    {
-      System.out.println("Happy Birthday!");
-      System.out.println("Your age: "+age);
-    }
-  }
-}
-</pre>
-<h3 class="code-heading">Html :</h3>
-<pre>
-&lt;html>
-  &lt;body>
-    &lt;div id="birthdayCard">
-      &lt;name="Mohsina Sheikh">
-      &lt;message="Happy Birthdat!">
-    &lt;/div>
-  &lt;/body>
-&lt;/html>
-</pre>
-			<img id="" style="width: 50%;" src="images/birthday21.png">
+			<img onClick="playAudio2()" class="party-img" src="images/party.png">
+			
+			<img id="" style="width: 50%;" src="images/taj.png">
+			<!-- <img id="" style="width: 50%;" src="images/birthday21.png"> -->
 
 			<p style="color: #fff;">
 				Birthdays come around every year, but friends like you only come once in a lifetime. I feel so lucky to have you as my bestfriend. Hope your birthday is as special as you are. May all of your dreams come true. Thanks for being such a great friend. For many people, the word friend is just a sequence of letters. For me, it is the source of happiness and strength because of you.
-				<br><br>. .... ... .... ....... ...... ..... ...... .... . . ... ... ...... ..... ... . . .... ... ... ...... .. ...... .. .............. . ......
 			</p>
 			<img class="party-img2" src="images/happy-birthday-theme.jpg">
 			<p class="from">From : Afnan Danish</p>
@@ -313,7 +285,7 @@ public class HappyBirthday extend Mohsina
 </html>
 
 <script>
-var countDownDate = new Date("SEP 05, 2021 0:00:00").getTime();
+var countDownDate = new Date("APR 23, 2022 15:05:00").getTime();
 var x = setInterval(function() {
 	var now = new Date().getTime();
 	var distance = countDownDate - now;
@@ -341,8 +313,12 @@ var x = setInterval(function() {
 	    }, 7000);
 	    setTimeout(function() {
 	    	document.getElementById("welcome").style.display = "none";
-		
+				
 	    }, 8000);
+			setTimeout(function() {
+				console.log(1)
+				playAudio();
+			}, 10000);
 	}
 }, 1000);
 
@@ -361,6 +337,10 @@ function playAudio() {
 
 
   	
+}
+
+function playAudio2() {
+	y.play();
 }
 
 </script>
